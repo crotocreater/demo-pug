@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.about-bg{
+    background-image: url('./images/about-bg.png');
+}
+.triangle {
+    width: 0;
+    height: 0;
+    width: 25px; /* Kích thước của hình tam giác */
+    height: 15px;
+    background-image: linear-gradient(to right,#ff6a38, #ff0a0a);
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  }
+  
+.message-bg{
+    background-image: url('./images/contact-bg.png');
+}
