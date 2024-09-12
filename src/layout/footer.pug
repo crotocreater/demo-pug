@@ -8,8 +8,10 @@ footer(class="flex flex-col gap-1 font-sans font-mono py-10 text-[1.1rem] text-g
     script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js")
     script(src="https://cdn.tailwindcss.com")
     //- script(src=".././tailwind.config.js")
+    script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
     script(src="./js/index.js") 
     script.
+        AOS.init();
         new WOW().init()
         var checkHover = false 
         const onhover = (idHover, idHidden)=>{

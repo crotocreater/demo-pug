@@ -1,38 +1,52 @@
-div(class="px-20 py-10 gap-20 flex flex-col justify-center items-center", id="portfolio") 
-    h1(class="-tracking-tighter  text-gray-700 uppercase text-center w-[40vw] mt-1text-wrap" style="font-size : 35px; font-weight : 700") See What Our Agency 
+div(class="px-20 py-10 gap-20 flex flex-col justify-center items-center h-[80vh]", id="portfolio") 
+    h1(class="-tracking-tighter  text-gray-700 uppercase text-center w-[40vw] h-[80%] mt-1text-wrap transition delay-500" data-aos="zoom-in-up" style="font-size : 35px; font-weight : 700") See What Our Agency 
         span(class="text-cyan-500") Offer 
         span & What We 
         span(class="text-red-500") Provide
     div(class="flex gap-10 justify-center items-center") 
         div(class="flex flex-col gap-2") 
-            div(class="w-[20vw] flex flex-col items-center ") 
+            div(class="w-[20vw] flex flex-col items-center hidden transition-all delay-100", onmouseover="onHover(1)", onmouseout="endHover(1)",id='1') 
                 div(class="bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex flex-col justify-center text-white text-center py-5 px-3 items-center")
                     h3(class="font-bold text-xl p-2") SEO Analysis
                     p(class="text-xl my-2") Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter
                 div(class="triangle") 
-            div(onhover="" class="flex justify-center items-center px-5 py-7 rounded-xl border  border-black-[0px] shadow-lg w-[20vw]") 
+            div(onmouseover="onHover(1)", onmouseout="endHover(1)", class="transition-all delay-100 flex justify-center items-center px-5 py-7 rounded-xl border  border-black-[0px] shadow-lg w-[20vw]") 
                 img(class="w-[100px]",src="./images/about-left-image.png", alt="")
         div(class="flex flex-col gap-2") 
-            div(class="flex flex-col items-center w-[20vw] hidden") 
+            div(class="flex flex-col items-center w-[20vw] transition-all delay-100 hidden", onmouseover="onHover(2)", onmouseout="endHover(2)",id='2') 
                 div(class="bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex flex-col justify-center text-white text-center py-5 px-3 items-center")
                     h3(class="font-bold text-xl p-2") Website Reporting 
                     p(class="text-xl my-2") Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter
                 div(class="triangle") 
-            div(onhover="" class="flex justify-center items-center px-5 py-7 rounded-xl border  border-black-[0px] shadow-lg w-[20vw]") 
+            div(onmouseover="onHover(2)", onmouseout="endHover(2)",class="transition-all delay-100 flex justify-center items-center px-5 py-7 rounded-xl border  border-black-[0px] shadow-lg w-[20vw]") 
                 img(class="w-[100px]",src="./images/about-left-image.png", alt="")
         div(class="flex flex-col gap-2") 
-            div(class="flex flex-col items-center w-[20vw] hidden" ) 
+            div(class="flex flex-col items-center w-[20vw] hidden transition-all delay-100" ,onmouseover="onHover(3)", onmouseout="endHover(3)",id='3') 
                 div(class="bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex flex-col justify-center text-white text-center py-5 px-3 items-center")
                     h3(class="font-bold text-xl p-2") Performance Tests
                     p(class="text-xl my-2") Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter
                 div(class="triangle") 
-            div(onhover="" class="flex justify-center items-center px-5 py-7 rounded-xl border  border-black-[0px] shadow-lg w-[20vw]") 
+            div(onmouseover="onHover(3)", onmouseout="endHover(3)",class="transition-all delay-100 flex justify-center items-center px-5 py-7 rounded-xl border  border-black-[0px] shadow-lg w-[20vw]") 
                 img(class="w-[100px]",src="./images/about-left-image.png", alt="")
         div(class="flex flex-col gap-2") 
-            div(class="flex flex-col items-center w-[20vw] hidden") 
+            div(class="flex flex-col items-center w-[20vw] hidden transition-all delay-100", onmouseover="onHover(4)", onmouseout="endHover(4)",id='4') 
                 div(class="bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex flex-col justify-center text-white text-center py-5 px-3 items-center")
                     h3(class="font-bold text-xl p-2") Data  Analysis 
                     p(class="text-xl my-2") Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter
                 div(class="triangle") 
-            div(onhover="" class="flex justify-center items-center px-5 py-7 rounded-xl border  border-black-[0px] shadow-lg w-[20vw]") 
+            div(onmouseover="onHover(4)", onmouseout="endHover(4)", class="transition-all delay-100 flex justify-center items-center px-5 py-7 rounded-xl border  border-black-[0px] shadow-lg w-[20vw]") 
                 img(class="w-[100px]",src="./images/about-left-image.png", alt="")
+
+        script.
+            const onHover = (id)=>{
+                var element = document.getElementById(id);
+                if(element.classList.contains('hidden')){
+                    element.classList.remove('hidden')
+                }
+            }
+            const endHover = (id)=>{
+                var element = document.getElementById(id);
+                if(!element.classList.contains('hidden')){
+                    element.classList.add('hidden')
+                }
+            }
